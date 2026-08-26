@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Apps | VendorConnect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f8ff;
+            color: #1f2937;
+        }
+
+        nav {
+            background-color: #173f8a;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+        }
+
+        .hero .icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: #173f8a;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .section {
+            padding: 60px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #173f8a;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .tips {
+            background-color: #173f8a;
+            color: white;
+            padding: 60px 8%;
+        }
+
+        .tips h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .tips-list {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .back {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .back a {
+            display: inline-block;
+            background-color: #173f8a;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #102c5f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <div class="logo">VendorConnect</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="apps.html">Apps</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="icon">📱</div>
+
+        <h1>Digital Apps for Small Vendors</h1>
+
+        <p>
+            Digital applications can help small vendors manage
+            payments, communicate with customers and organize
+            everyday business activities more conveniently.
+        </p>
+
+    </section>
+
+
+    <!-- Introduction -->
+    <section class="section">
+
+        <h2>Why Use Digital Apps?</h2>
+
+        <p class="intro">
+            Smartphones provide access to many useful digital
+            tools. Vendors can choose suitable applications
+            according to their business needs and comfort level.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">💳</div>
+
+                <h3>Payment Apps</h3>
+
+                <p>
+                    UPI-enabled payment applications can help
+                    customers make digital payments conveniently.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🧾</div>
+
+                <h3>Record Keeping</h3>
+
+                <p>
+                    Digital record-keeping tools can help vendors
+                    organize sales, expenses and transaction details.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">💬</div>
+
+                <h3>Customer Communication</h3>
+
+                <p>
+                    Messaging and business communication tools
+                    can help vendors communicate with customers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- More Digital Tools -->
+    <section class="section">
+
+        <h2>Useful Digital Tools</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">📊</div>
+
+                <h3>Expense Tracking</h3>
+
+                <p>
+                    Digital tools can help vendors keep track of
+                    regular business expenses.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📦</div>
+
+                <h3>Inventory Management</h3>
+
+                <p>
+                    Simple inventory tools can help track available
+                    products and stock levels.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📅</div>
+
+                <h3>Business Planning</h3>
+
+                <p>
+                    Digital calendars and planning tools can help
+                    organize daily business activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Benefits -->
+    <section class="section">
+
+        <h2>Benefits of Digital Apps</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">⚡</div>
+
+                <h3>Save Time</h3>
+
+                <p>
+                    Digital tools can make some routine business
+                    tasks faster and easier to manage.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📋</div>
+
+                <h3>Better Organization</h3>
+
+                <p>
+                    Digital records can help keep important
+                    business information organized.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🤝</div>
+
+                <h3>Customer Convenience</h3>
+
+                <p>
+                    Digital services can provide customers with
+                    convenient ways to communicate and pay.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safety -->
+    <section class="tips">
+
+        <h2>Before Using Any Digital App</h2>
+
+        <div class="tips-list">
+
+            <p>✔ Download applications from trusted official app stores.</p>
+
+            <p>✔ Check the application name and developer before installing.</p>
+
+            <p>✔ Keep applications updated.</p>
+
+            <p>✔ Use a strong screen lock on your mobile device.</p>
+
+            <p>✔ Never share passwords, OTPs or payment PINs.</p>
+
+            <p>✔ Review app permissions and avoid unnecessary access.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Back -->
+    <div class="back">
+
+        <a href="index.html">← Back to Home</a>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 VendorConnect | CEP Project</p>
+
+        <p>Helping Small Vendors Go Digital</p>
+
+    </footer>
+
+</body>
+</html>

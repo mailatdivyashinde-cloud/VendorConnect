@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UPI Guide | VendorConnect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f8ff;
+            color: #1f2937;
+        }
+
+        nav {
+            background-color: #173f8a;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+        }
+
+        .hero .icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: #173f8a;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .section {
+            padding: 60px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #173f8a;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .steps {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .step {
+            background: white;
+            margin-bottom: 18px;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        .step strong {
+            color: #173f8a;
+            font-size: 18px;
+        }
+
+        .safety {
+            background-color: #173f8a;
+            color: white;
+            padding: 60px 8%;
+        }
+
+        .safety h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .safety-list {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .back {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .back a {
+            display: inline-block;
+            background-color: #173f8a;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #102c5f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">VendorConnect</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="icon">💳</div>
+
+        <h1>Understanding UPI Payments</h1>
+
+        <p>
+            UPI allows customers to make quick digital payments
+            directly from their bank account using a mobile phone.
+            It is one of the convenient digital payment methods
+            available to small vendors.
+        </p>
+
+    </section>
+
+
+    <!-- What is UPI -->
+    <section class="section">
+
+        <h2>What is UPI?</h2>
+
+        <p class="intro">
+            UPI stands for Unified Payments Interface. It is a
+            digital payment system that allows users to transfer
+            money between bank accounts through supported payment
+            applications.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📱 Mobile Based</h3>
+                <p>
+                    Payments can be made using a mobile phone
+                    and a supported UPI application.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Quick Payments</h3>
+                <p>
+                    UPI can make everyday payment transactions
+                    simple and convenient.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🏦 Direct Bank Transfer</h3>
+                <p>
+                    UPI transactions can transfer money directly
+                    between bank accounts.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+    <section class="section">
+
+        <h2>How Does a UPI Payment Work?</h2>
+
+        <p class="intro">
+            A typical UPI payment can follow these simple steps:
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <strong>Step 1 — Customer Opens a UPI App</strong>
+                <p>
+                    The customer opens their preferred UPI-enabled
+                    payment application.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 2 — Scan QR or Enter Payment Details</strong>
+                <p>
+                    The customer scans the vendor's QR code or
+                    uses the available payment details.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 3 — Enter Amount</strong>
+                <p>
+                    The customer enters the amount that needs
+                    to be paid.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 4 — Verify the Payment</strong>
+                <p>
+                    The customer checks the recipient and amount
+                    before completing the transaction.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 5 — Payment Confirmation</strong>
+                <p>
+                    After the transaction is completed, the vendor
+                    should verify the actual payment status.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Benefits -->
+    <section class="section">
+
+        <h2>Benefits of UPI for Small Vendors</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💰 Convenient Payments</h3>
+                <p>
+                    Customers can pay digitally without needing
+                    to carry cash.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Digital Records</h3>
+                <p>
+                    Completed transactions can provide a digital
+                    record that can help with basic tracking.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Customer Convenience</h3>
+                <p>
+                    Offering digital payment options can provide
+                    customers with another convenient way to pay.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safety -->
+    <section class="safety">
+
+        <h2>Important UPI Safety Tips</h2>
+
+        <div class="safety-list">
+
+            <p>✔ Never share your UPI PIN with anyone.</p>
+
+            <p>✔ Never share OTPs or confidential banking information.</p>
+
+            <p>✔ Verify the payment status instead of relying only on a screenshot.</p>
+
+            <p>✔ Check the amount and recipient before completing a transaction.</p>
+
+            <p>✔ Be careful with unknown links and suspicious payment requests.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Back Button -->
+    <div class="back">
+
+        <a href="index.html">← Back to Home</a>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 VendorConnect | CEP Project</p>
+
+        <p>Helping Small Vendors Go Digital</p>
+
+    </footer>
+
+</body>
+</html>

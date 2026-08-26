@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Payments | VendorConnect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f8ff;
+            color: #1f2937;
+        }
+
+        nav {
+            background-color: #173f8a;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+        }
+
+        .hero .icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: #173f8a;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .section {
+            padding: 60px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #173f8a;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .steps {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .step {
+            background-color: white;
+            margin-bottom: 18px;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        .step strong {
+            color: #173f8a;
+            font-size: 18px;
+        }
+
+        .demo {
+            max-width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .demo-qr {
+            width: 170px;
+            height: 170px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 8px solid #173f8a;
+            font-size: 22px;
+            font-weight: bold;
+            color: #173f8a;
+        }
+
+        .demo small {
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .safety {
+            background-color: #173f8a;
+            color: white;
+            padding: 60px 8%;
+        }
+
+        .safety h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .safety-list {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .back {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .back a {
+            display: inline-block;
+            background-color: #173f8a;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #102c5f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">VendorConnect</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="icon">🔳</div>
+
+        <h1>QR Payment Guide</h1>
+
+        <p>
+            QR codes provide a convenient way for customers
+            to make digital payments by scanning a code using
+            a supported payment application.
+        </p>
+
+    </section>
+
+
+    <!-- What is QR -->
+    <section class="section">
+
+        <h2>What is a QR Code?</h2>
+
+        <p class="intro">
+            A QR code is a two-dimensional code that can store
+            information. In digital payments, a payment QR code
+            can help customers access the payment details of
+            a vendor quickly.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📷 Easy to Scan</h3>
+
+                <p>
+                    Customers can scan the displayed payment QR
+                    code using a compatible mobile application.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Quick Process</h3>
+
+                <p>
+                    Scanning a payment QR can make it convenient
+                    to enter or access payment details.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💳 Digital Payment</h3>
+
+                <p>
+                    QR codes can support digital payment methods
+                    and reduce dependence on cash-only transactions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+    <section class="section">
+
+        <h2>How Does QR Payment Work?</h2>
+
+        <p class="intro">
+            A typical QR payment can follow these simple steps.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <strong>Step 1 — Vendor Displays the QR Code</strong>
+
+                <p>
+                    The vendor keeps the payment QR code in a
+                    visible and convenient location.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 2 — Customer Opens a Payment App</strong>
+
+                <p>
+                    The customer opens a supported digital payment
+                    application.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 3 — Customer Scans the QR</strong>
+
+                <p>
+                    The customer uses the application's scanner
+                    to scan the vendor's payment QR code.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 4 — Enter and Verify Amount</strong>
+
+                <p>
+                    The customer enters the payment amount and
+                    checks the payment details carefully.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>Step 5 — Confirm Payment</strong>
+
+                <p>
+                    After completing the transaction, the vendor
+                    should verify the actual payment status.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Demo QR -->
+    <section class="section">
+
+        <h2>Demo QR Code</h2>
+
+        <div class="demo">
+
+            <h3>Sample Payment QR</h3>
+
+            <div class="demo-qr">
+                DEMO<br>QR
+            </div>
+
+            <small>
+                This is only a demonstration illustration.
+                It is not a real payment QR code and cannot
+                be used to make a transaction.
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- Benefits -->
+    <section class="section">
+
+        <h2>Benefits for Small Vendors</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💰 Less Cash Handling</h3>
+
+                <p>
+                    Digital payments can provide an alternative
+                    to handling physical cash.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Customer Convenience</h3>
+
+                <p>
+                    Customers can have another convenient option
+                    for making payments.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Transaction Records</h3>
+
+                <p>
+                    Digital transactions can provide records that
+                    may help with basic payment tracking.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safety -->
+    <section class="safety">
+
+        <h2>QR Payment Safety Tips</h2>
+
+        <div class="safety-list">
+
+            <p>✔ Display only the correct payment QR code.</p>
+
+            <p>✔ Check the payment status after a transaction.</p>
+
+            <p>✔ Do not rely only on screenshots as proof of payment.</p>
+
+            <p>✔ Never share your UPI PIN or OTP with anyone.</p>
+
+            <p>✔ Be careful with unknown or suspicious QR codes.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Back -->
+    <div class="back">
+
+        <a href="index.html">← Back to Home</a>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 VendorConnect | CEP Project</p>
+
+        <p>Helping Small Vendors Go Digital</p>
+
+    </footer>
+
+</body>
+</html>
