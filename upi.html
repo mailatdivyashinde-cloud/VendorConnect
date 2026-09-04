@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UPI Guide | VendorConnect</title>
+    <title>UPI Payments | VendorConnect</title>
 
     <style>
         * {
@@ -15,12 +15,12 @@
         }
 
         body {
-            background-color: #f5f8ff;
+            background: #f5f8ff;
             color: #1f2937;
         }
 
         nav {
-            background-color: #173f8a;
+            background: #173f8a;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
@@ -37,7 +37,6 @@
             color: white;
             text-decoration: none;
             margin-left: 22px;
-            font-size: 15px;
         }
 
         nav a:hover {
@@ -46,7 +45,7 @@
 
         .hero {
             text-align: center;
-            padding: 70px 8%;
+            padding: 65px 8%;
             background: linear-gradient(135deg, #eaf2ff, #ffffff);
         }
 
@@ -70,7 +69,7 @@
         }
 
         .section {
-            padding: 60px 8%;
+            padding: 55px 8%;
         }
 
         .section h2 {
@@ -82,7 +81,7 @@
 
         .intro {
             max-width: 800px;
-            margin: 0 auto 40px;
+            margin: 0 auto 35px;
             text-align: center;
             line-height: 1.7;
             color: #555;
@@ -96,7 +95,7 @@
 
         .card {
             background: white;
-            padding: 30px;
+            padding: 28px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
         }
@@ -106,9 +105,14 @@
             margin-bottom: 12px;
         }
 
-        .card p {
-            color: #666;
-            line-height: 1.6;
+        .card p,
+        .card li {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            padding-left: 20px;
         }
 
         .steps {
@@ -118,65 +122,49 @@
 
         .step {
             background: white;
-            margin-bottom: 18px;
+            margin: 15px 0;
             padding: 22px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
         }
 
         .step strong {
             color: #173f8a;
-            font-size: 18px;
         }
 
         .safety {
-            background-color: #173f8a;
-            color: white;
-            padding: 60px 8%;
-        }
-
-        .safety h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 30px;
-        }
-
-        .safety-list {
-            max-width: 800px;
+            background: #eaf2ff;
+            padding: 35px;
+            border-radius: 15px;
+            max-width: 900px;
             margin: auto;
-            line-height: 2;
-            font-size: 17px;
         }
 
-        .back {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .back a {
-            display: inline-block;
-            background-color: #173f8a;
-            color: white;
-            text-decoration: none;
-            padding: 14px 25px;
-            border-radius: 8px;
+        .safety h3 {
+            color: #173f8a;
+            margin-bottom: 15px;
         }
 
         footer {
-            background-color: #102c5f;
+            background: #102c5f;
             color: white;
             text-align: center;
             padding: 25px;
+            margin-top: 30px;
         }
 
         @media (max-width: 800px) {
             nav {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
             nav a {
                 margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
             }
 
             .cards {
@@ -188,70 +176,64 @@
 
 <body>
 
-    <!-- Navigation -->
     <nav>
         <div class="logo">VendorConnect</div>
 
         <div>
             <a href="index.html">Home</a>
             <a href="upi.html">UPI</a>
-            <a href="index.html#about">About</a>
+            <a href="qr.html">QR Payment</a>
+            <a href="apps.html">Apps</a>
         </div>
     </nav>
 
-
-    <!-- Hero -->
     <section class="hero">
-
         <div class="icon">💳</div>
 
         <h1>Understanding UPI Payments</h1>
 
         <p>
-            UPI allows customers to make quick digital payments
-            directly from their bank account using a mobile phone.
-            It is one of the convenient digital payment methods
-            available to small vendors.
+            UPI is a simple digital payment system that allows
+            customers and businesses to transfer money electronically
+            using a mobile phone and a UPI-enabled application.
         </p>
-
     </section>
 
-
-    <!-- What is UPI -->
     <section class="section">
 
         <h2>What is UPI?</h2>
 
         <p class="intro">
-            UPI stands for Unified Payments Interface. It is a
-            digital payment system that allows users to transfer
-            money between bank accounts through supported payment
-            applications.
+            UPI stands for Unified Payments Interface. It enables
+            convenient digital money transfers between bank accounts.
+            Small vendors can accept digital payments without handling
+            cash for every transaction.
         </p>
 
         <div class="cards">
 
             <div class="card">
-                <h3>📱 Mobile Based</h3>
+                <h3>⚡ Fast</h3>
                 <p>
-                    Payments can be made using a mobile phone
-                    and a supported UPI application.
+                    Digital payments can be completed quickly,
+                    helping reduce waiting time for customers.
                 </p>
             </div>
 
             <div class="card">
-                <h3>⚡ Quick Payments</h3>
+                <h3>📱 Convenient</h3>
                 <p>
-                    UPI can make everyday payment transactions
-                    simple and convenient.
+                    Customers can make payments using their mobile
+                    devices without needing to carry cash.
                 </p>
             </div>
 
             <div class="card">
-                <h3>🏦 Direct Bank Transfer</h3>
+                <h3>🔒 Secure</h3>
                 <p>
-                    UPI transactions can transfer money directly
-                    between bank accounts.
+                    UPI uses authentication methods to help protect
+                    transactions. Users should always keep their PIN
+                    private.
                 </p>
             </div>
 
@@ -259,91 +241,70 @@
 
     </section>
 
-
-    <!-- How it works -->
     <section class="section">
 
-        <h2>How Does a UPI Payment Work?</h2>
-
-        <p class="intro">
-            A typical UPI payment can follow these simple steps:
-        </p>
+        <h2>How Does UPI Payment Work?</h2>
 
         <div class="steps">
 
             <div class="step">
-                <strong>Step 1 — Customer Opens a UPI App</strong>
-                <p>
-                    The customer opens their preferred UPI-enabled
-                    payment application.
-                </p>
+                <strong>Step 1:</strong>
+                The customer opens their UPI-enabled payment app.
             </div>
 
             <div class="step">
-                <strong>Step 2 — Scan QR or Enter Payment Details</strong>
-                <p>
-                    The customer scans the vendor's QR code or
-                    uses the available payment details.
-                </p>
+                <strong>Step 2:</strong>
+                The customer selects the payment option and enters
+                the required details or scans the vendor's QR code.
             </div>
 
             <div class="step">
-                <strong>Step 3 — Enter Amount</strong>
-                <p>
-                    The customer enters the amount that needs
-                    to be paid.
-                </p>
+                <strong>Step 3:</strong>
+                The customer enters the payment amount.
             </div>
 
             <div class="step">
-                <strong>Step 4 — Verify the Payment</strong>
-                <p>
-                    The customer checks the recipient and amount
-                    before completing the transaction.
-                </p>
+                <strong>Step 4:</strong>
+                The customer authorizes the transaction using their
+                UPI authentication method.
             </div>
 
             <div class="step">
-                <strong>Step 5 — Payment Confirmation</strong>
-                <p>
-                    After the transaction is completed, the vendor
-                    should verify the actual payment status.
-                </p>
+                <strong>Step 5:</strong>
+                The payment status is displayed after the transaction.
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- Benefits -->
     <section class="section">
 
-        <h2>Benefits of UPI for Small Vendors</h2>
+        <h2>Benefits for Small Vendors</h2>
 
         <div class="cards">
 
             <div class="card">
-                <h3>💰 Convenient Payments</h3>
+                <h3>💰 Less Cash Handling</h3>
                 <p>
-                    Customers can pay digitally without needing
-                    to carry cash.
+                    Digital payments can reduce the need to handle
+                    physical cash during everyday transactions.
                 </p>
             </div>
 
             <div class="card">
-                <h3>📊 Digital Records</h3>
+                <h3>😊 Customer Convenience</h3>
                 <p>
-                    Completed transactions can provide a digital
-                    record that can help with basic tracking.
+                    Customers can pay digitally using their preferred
+                    UPI-enabled application.
                 </p>
             </div>
 
             <div class="card">
-                <h3>🤝 Customer Convenience</h3>
+                <h3>📊 Better Records</h3>
                 <p>
-                    Offering digital payment options can provide
-                    customers with another convenient way to pay.
+                    Digital transaction histories can help vendors
+                    keep track of payments.
                 </p>
             </div>
 
@@ -351,44 +312,30 @@
 
     </section>
 
+    <section class="section">
 
-    <!-- Safety -->
-    <section class="safety">
+        <h2>UPI Safety Tips</h2>
 
-        <h2>Important UPI Safety Tips</h2>
+        <div class="safety">
 
-        <div class="safety-list">
+            <h3>🛡️ Stay Safe While Using Digital Payments</h3>
 
-            <p>✔ Never share your UPI PIN with anyone.</p>
-
-            <p>✔ Never share OTPs or confidential banking information.</p>
-
-            <p>✔ Verify the payment status instead of relying only on a screenshot.</p>
-
-            <p>✔ Check the amount and recipient before completing a transaction.</p>
-
-            <p>✔ Be careful with unknown links and suspicious payment requests.</p>
+            <ul>
+                <li>Never share your UPI PIN with anyone.</li>
+                <li>Never share OTPs or confidential banking information.</li>
+                <li>Check the recipient and amount before approving a payment.</li>
+                <li>Do not approve unexpected payment requests.</li>
+                <li>Use only trusted and official payment applications.</li>
+                <li>If something seems suspicious, contact your bank or payment service.</li>
+            </ul>
 
         </div>
 
     </section>
 
-
-    <!-- Back Button -->
-    <div class="back">
-
-        <a href="index.html">← Back to Home</a>
-
-    </div>
-
-
-    <!-- Footer -->
     <footer>
-
         <p>© 2026 VendorConnect | CEP Project</p>
-
         <p>Helping Small Vendors Go Digital</p>
-
     </footer>
 
 </body>
