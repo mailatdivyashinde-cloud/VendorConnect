@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Digital Awareness Quiz | VendorConnect</title>
+    <title>Digital Quiz | VendorConnect</title>
 
     <style>
         * {
@@ -15,12 +15,12 @@
         }
 
         body {
-            background-color: #f5f8ff;
+            background: #f5f8ff;
             color: #1f2937;
         }
 
         nav {
-            background-color: #173f8a;
+            background: #173f8a;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
@@ -36,12 +36,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 18px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+            margin-left: 20px;
         }
 
         .hero {
@@ -51,34 +46,33 @@
         }
 
         .hero .icon {
-            font-size: 60px;
-            margin-bottom: 15px;
+            font-size: 65px;
         }
 
         .hero h1 {
             color: #173f8a;
-            font-size: 40px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin: 15px;
         }
 
         .hero p {
             max-width: 750px;
             margin: auto;
             color: #555;
-            font-size: 18px;
             line-height: 1.7;
+            font-size: 18px;
         }
 
         .quiz-container {
             max-width: 850px;
             margin: 50px auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         .question {
-            background-color: white;
-            padding: 28px;
-            margin-bottom: 25px;
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
         }
@@ -86,97 +80,80 @@
         .question h3 {
             color: #173f8a;
             margin-bottom: 18px;
-            line-height: 1.5;
         }
 
-        .option {
+        label {
             display: block;
-            background-color: #f5f8ff;
-            padding: 13px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f5f8ff;
             border-radius: 8px;
             cursor: pointer;
         }
 
-        .option:hover {
-            background-color: #e5edff;
+        label:hover {
+            background: #eaf2ff;
         }
 
-        .option input {
+        input {
             margin-right: 10px;
         }
 
-        .submit-area {
-            text-align: center;
-            margin: 35px 0;
-        }
-
-        button {
-            background-color: #173f8a;
+        .btn {
+            display: block;
+            margin: 30px auto;
+            background: #173f8a;
             color: white;
             border: none;
-            padding: 15px 35px;
+            padding: 14px 28px;
             border-radius: 8px;
-            font-size: 17px;
             cursor: pointer;
+            font-size: 16px;
         }
 
-        button:hover {
-            background-color: #0f2e68;
+        .btn:hover {
+            background: #0f2e68;
         }
 
         #result {
-            display: none;
-            background-color: white;
-            max-width: 600px;
-            margin: 30px auto 50px;
-            padding: 35px;
             text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-        }
-
-        #result h2 {
-            color: #173f8a;
-            margin-bottom: 15px;
-        }
-
-        #score {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: bold;
-            margin: 15px 0;
+            color: #173f8a;
+            margin: 25px;
         }
 
-        #message {
+        .tips {
+            background: #eaf2ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .tips h2 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .tips p {
             color: #555;
             line-height: 1.6;
         }
 
-        .back {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .back a {
-            display: inline-block;
-            background-color: #173f8a;
-            color: white;
-            text-decoration: none;
-            padding: 13px 25px;
-            border-radius: 8px;
-        }
-
         footer {
-            background-color: #102c5f;
+            background: #102c5f;
             color: white;
             text-align: center;
             padding: 25px;
+            margin-top: 50px;
         }
 
         @media (max-width: 800px) {
+
             nav {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
             nav a {
@@ -184,7 +161,7 @@
             }
 
             .hero h1 {
-                font-size: 32px;
+                font-size: 34px;
             }
         }
     </style>
@@ -192,58 +169,57 @@
 
 <body>
 
-    <!-- Navigation -->
     <nav>
 
-        <div class="logo">
-            VendorConnect
-        </div>
+        <div class="logo">VendorConnect</div>
 
         <div>
             <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="apps.html">Apps</a>
+            <a href="benefit.html">Benefits</a>
             <a href="guide.html">Guide</a>
-            <a href="safety.html">Safety</a>
             <a href="quiz.html">Quiz</a>
+            <a href="safety.html">Safety</a>
         </div>
 
     </nav>
 
 
-    <!-- Hero -->
     <section class="hero">
 
-        <div class="icon">🧠</div>
+        <div class="icon">🎯</div>
 
-        <h1>Digital Awareness Quiz</h1>
+        <h1>VendorConnect Digital Quiz</h1>
 
         <p>
             Test your basic knowledge about UPI, QR payments,
-            digital safety and useful digital tools for small businesses.
+            digital apps and online safety.
         </p>
 
     </section>
 
 
-    <!-- Quiz -->
     <div class="quiz-container">
 
         <div class="question">
 
-            <h3>1. What does UPI help users do?</h3>
+            <h3>1. What does UPI stand for?</h3>
 
-            <label class="option">
-                <input type="radio" name="q1" value="1">
-                Make digital payments
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                Universal Payment Internet
             </label>
 
-            <label class="option">
-                <input type="radio" name="q1" value="0">
-                Print documents
+            <label>
+                <input type="radio" name="q1" value="correct">
+                Unified Payments Interface
             </label>
 
-            <label class="option">
-                <input type="radio" name="q1" value="0">
-                Repair a smartphone
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                User Payment Identity
             </label>
 
         </div>
@@ -251,21 +227,43 @@
 
         <div class="question">
 
-            <h3>2. Which information should never be shared with another person?</h3>
+            <h3>2. What is commonly used to scan a payment QR code?</h3>
 
-            <label class="option">
-                <input type="radio" name="q2" value="1">
-                UPI PIN
+            <label>
+                <input type="radio" name="q2" value="correct">
+                A compatible smartphone or payment application
             </label>
 
-            <label class="option">
-                <input type="radio" name="q2" value="0">
+            <label>
+                <input type="radio" name="q2" value="wrong">
+                A television
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="wrong">
+                A printer only
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>3. Which information should never be shared with others?</h3>
+
+            <label>
+                <input type="radio" name="q3" value="wrong">
                 Shop name
             </label>
 
-            <label class="option">
-                <input type="radio" name="q2" value="0">
-                Business category
+            <label>
+                <input type="radio" name="q3" value="correct">
+                UPI PIN or OTP
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="wrong">
+                Business opening hours
             </label>
 
         </div>
@@ -273,43 +271,21 @@
 
         <div class="question">
 
-            <h3>3. What should a vendor check after receiving a digital payment?</h3>
+            <h3>4. What should a vendor check after a digital payment?</h3>
 
-            <label class="option">
-                <input type="radio" name="q3" value="1">
-                Actual transaction status
+            <label>
+                <input type="radio" name="q4" value="correct">
+                The actual payment status and transaction details
             </label>
 
-            <label class="option">
-                <input type="radio" name="q3" value="0">
-                Only a payment screenshot
+            <label>
+                <input type="radio" name="q4" value="wrong">
+                Only the customer's screenshot
             </label>
 
-            <label class="option">
-                <input type="radio" name="q3" value="0">
-                The customer's phone wallpaper
-            </label>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>4. What is a QR code useful for in a small business?</h3>
-
-            <label class="option">
-                <input type="radio" name="q4" value="1">
-                Receiving digital payments
-            </label>
-
-            <label class="option">
-                <input type="radio" name="q4" value="0">
-                Increasing phone storage
-            </label>
-
-            <label class="option">
-                <input type="radio" name="q4" value="0">
-                Charging a phone
+            <label>
+                <input type="radio" name="q4" value="wrong">
+                Nothing
             </label>
 
         </div>
@@ -317,60 +293,47 @@
 
         <div class="question">
 
-            <h3>5. What is a good digital safety practice?</h3>
+            <h3>5. Where should apps preferably be downloaded from?</h3>
 
-            <label class="option">
-                <input type="radio" name="q5" value="1">
-                Avoid suspicious links and protect confidential information
+            <label>
+                <input type="radio" name="q5" value="correct">
+                Official and trusted app stores
             </label>
 
-            <label class="option">
-                <input type="radio" name="q5" value="0">
-                Share OTPs with strangers
+            <label>
+                <input type="radio" name="q5" value="wrong">
+                Unknown websites
             </label>
 
-            <label class="option">
-                <input type="radio" name="q5" value="0">
-                Share your UPI PIN with customers
+            <label>
+                <input type="radio" name="q5" value="wrong">
+                Random links
             </label>
 
         </div>
 
 
-        <div class="submit-area">
+        <button class="btn" onclick="checkQuiz()">
+            Check Answers
+        </button>
 
-            <button onclick="checkQuiz()">
-                Submit Quiz
-            </button>
+        <div id="result"></div>
+
+
+        <div class="tips">
+
+            <h2>🛡️ Digital Safety Reminder</h2>
+
+            <p>
+                Never share your UPI PIN, OTP or passwords.
+                Always verify payment details before completing a transaction.
+            </p>
 
         </div>
 
     </div>
 
 
-    <!-- Result -->
-    <div id="result">
-
-        <h2>🎉 Quiz Result</h2>
-
-        <div id="score"></div>
-
-        <p id="message"></p>
-
-    </div>
-
-
-    <!-- Back -->
-    <div class="back">
-
-        <a href="index.html">
-            ← Back to Home
-        </a>
-
-    </div>
-
-
-    <!-- Footer -->
     <footer>
 
         <p>© 2026 VendorConnect | CEP Project</p>
@@ -386,46 +349,22 @@
 
             let score = 0;
 
-            for (let i = 1; i <= 5; i++) {
+            let questions = document.querySelectorAll(".question");
 
-                let answer = document.querySelector(
-                    'input[name="q' + i + '"]:checked'
+            questions.forEach(function(question) {
+
+                let selected = question.querySelector(
+                    'input[type="radio"]:checked'
                 );
 
-                if (answer) {
-                    score += Number(answer.value);
+                if (selected && selected.value === "correct") {
+                    score++;
                 }
-            }
 
-            let result = document.getElementById("result");
-            let scoreText = document.getElementById("score");
-            let message = document.getElementById("message");
-
-            result.style.display = "block";
-
-            scoreText.innerHTML =
-                "Your Score: " + score + " / 5";
-
-            if (score === 5) {
-
-                message.innerHTML =
-                    "Excellent! 🎉 You have a strong understanding of digital awareness and safety.";
-
-            } else if (score >= 3) {
-
-                message.innerHTML =
-                    "Good job! 👍 You understand the basics. Explore our Digital Guide to learn more.";
-
-            } else {
-
-                message.innerHTML =
-                    "Keep learning! 📚 Visit the Digital Guide and Digital Safety pages and try the quiz again.";
-
-            }
-
-            result.scrollIntoView({
-                behavior: "smooth"
             });
+
+            document.getElementById("result").innerHTML =
+                "🎉 Your Score: " + score + " / 5";
 
         }
 

@@ -36,7 +36,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 22px;
+            margin-left: 18px;
             font-size: 15px;
         }
 
@@ -51,6 +51,7 @@
             align-items: center;
             justify-content: space-between;
             background: linear-gradient(135deg, #eaf2ff, #ffffff);
+            gap: 40px;
         }
 
         .hero-text {
@@ -79,10 +80,10 @@
             display: inline-block;
             background-color: #173f8a;
             color: white;
-            padding: 14px 25px;
+            padding: 14px 22px;
             border-radius: 8px;
             text-decoration: none;
-            margin-right: 10px;
+            margin: 5px;
         }
 
         .btn:hover {
@@ -137,23 +138,11 @@
             gap: 25px;
         }
 
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
         .card {
             background-color: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            transition: 0.3s;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
         }
 
         .card-icon {
@@ -171,10 +160,26 @@
             line-height: 1.6;
         }
 
+        .quiz-box {
+            background: #eaf2ff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .quiz-box h2 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .quiz-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
         .about {
             background-color: #173f8a;
             color: white;
-            padding: 70px 8%;
+            padding: 70px 10%;
             text-align: center;
         }
 
@@ -184,89 +189,8 @@
         }
 
         .about p {
-            max-width: 850px;
-            margin: auto;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .about-cards {
-            max-width: 1000px;
-            margin: 45px auto 0;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .about-card {
-            background-color: white;
-            color: #1f2937;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: left;
-        }
-
-        .about-card h3 {
-            color: #173f8a;
-            margin-bottom: 10px;
-        }
-
-        .about-card p {
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .technology {
-            padding: 65px 8%;
-            text-align: center;
-            background-color: white;
-        }
-
-        .technology h2 {
-            color: #173f8a;
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
-
-        .technology p {
             max-width: 800px;
             margin: auto;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        .tech-list {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .tech-item {
-            background-color: #f5f8ff;
-            padding: 14px 22px;
-            border-radius: 25px;
-            color: #173f8a;
-            font-weight: bold;
-        }
-
-        .aim {
-            padding: 65px 8%;
-            text-align: center;
-            background: linear-gradient(135deg, #eaf2ff, #ffffff);
-        }
-
-        .aim h2 {
-            color: #173f8a;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .aim p {
-            max-width: 850px;
-            margin: auto;
-            color: #555;
             line-height: 1.8;
             font-size: 17px;
         }
@@ -292,7 +216,6 @@
             .hero {
                 flex-direction: column;
                 text-align: center;
-                gap: 40px;
             }
 
             .hero h1 {
@@ -303,8 +226,9 @@
                 grid-template-columns: 1fr;
             }
 
-            .about-cards {
-                grid-template-columns: 1fr;
+            .hero-card {
+                width: 100%;
+                max-width: 330px;
             }
         }
     </style>
@@ -312,30 +236,23 @@
 
 <body>
 
-    <!-- Navigation -->
     <nav>
-
-        <div class="logo">
-            VendorConnect
-        </div>
+        <div class="logo">VendorConnect</div>
 
         <div>
-
             <a href="index.html">Home</a>
-
-            <a href="guide.html">Learn</a>
-
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="apps.html">Apps</a>
+            <a href="benefit.html">Benefits</a>
+            <a href="guide.html">Guide</a>
             <a href="quiz.html">Quiz</a>
-
-            <a href="index.html#about">About</a>
-
+            <a href="safety.html">Safety</a>
         </div>
-
     </nav>
 
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
 
         <div class="hero-text">
 
@@ -349,13 +266,9 @@
                 QR codes, useful apps and safe digital practices.
             </p>
 
-            <a href="guide.html" class="btn">
-                Start Learning
-            </a>
+            <a href="#learn" class="btn">Start Learning</a>
 
-            <a href="#about" class="btn">
-                About Project
-            </a>
+            <a href="quiz.html" class="btn">Take Quiz</a>
 
         </div>
 
@@ -367,8 +280,8 @@
             <h3>Go Digital with Confidence</h3>
 
             <p>
-                Learn simple digital tools that can make
-                everyday business easier and more convenient.
+                Learn simple digital tools that can make everyday
+                business easier and more convenient.
             </p>
 
         </div>
@@ -376,7 +289,6 @@
     </section>
 
 
-    <!-- Learning Section -->
     <section class="section" id="learn">
 
         <h2>Explore Digital Tools</h2>
@@ -386,127 +298,82 @@
             help small vendors manage payments and business activities.
         </p>
 
-
         <div class="cards">
 
-            <a href="upi.html" class="card-link">
-                <div class="card">
+            <div class="card">
+                <div class="card-icon">💳</div>
+                <h3>UPI Payments</h3>
+                <p>
+                    Understand UPI and how digital payments can
+                    make transactions convenient.
+                </p>
+            </div>
 
-                    <div class="card-icon">💳</div>
+            <div class="card">
+                <div class="card-icon">🔳</div>
+                <h3>QR Payments</h3>
+                <p>
+                    Learn how QR codes allow customers to make
+                    quick digital payments.
+                </p>
+            </div>
 
-                    <h3>UPI Payments</h3>
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Digital Apps</h3>
+                <p>
+                    Discover useful applications that can support
+                    small business activities.
+                </p>
+            </div>
 
-                    <p>
-                        Understand what UPI is and how digital
-                        payments can make transactions convenient.
-                    </p>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Digital Safety</h3>
+                <p>
+                    Learn basic safety practices for protecting
+                    digital payments and personal information.
+                </p>
+            </div>
 
-                </div>
-            </a>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Business Benefits</h3>
+                <p>
+                    Understand how digital tools can improve
+                    convenience and business management.
+                </p>
+            </div>
 
-
-            <a href="qr.html" class="card-link">
-                <div class="card">
-
-                    <div class="card-icon">🔳</div>
-
-                    <h3>QR Payments</h3>
-
-                    <p>
-                        Learn how QR codes allow customers to make
-                        quick digital payments.
-                    </p>
-
-                </div>
-            </a>
-
-
-            <a href="apps.html" class="card-link">
-                <div class="card">
-
-                    <div class="card-icon">📱</div>
-
-                    <h3>Digital Apps</h3>
-
-                    <p>
-                        Discover useful digital applications that
-                        can support small business activities.
-                    </p>
-
-                </div>
-            </a>
-
-
-            <a href="safety.html" class="card-link">
-                <div class="card">
-
-                    <div class="card-icon">🛡️</div>
-
-                    <h3>Digital Safety</h3>
-
-                    <p>
-                        Learn basic safety practices for protecting
-                        digital payments and personal information.
-                    </p>
-
-                </div>
-            </a>
-
-
-            <a href="benefits.html" class="card-link">
-                <div class="card">
-
-                    <div class="card-icon">📊</div>
-
-                    <h3>Business Benefits</h3>
-
-                    <p>
-                        Understand how digital tools can improve
-                        convenience and business management.
-                    </p>
-
-                </div>
-            </a>
-
-
-            <a href="guide.html" class="card-link">
-                <div class="card">
-
-                    <div class="card-icon">📚</div>
-
-                    <h3>Digital Guide</h3>
-
-                    <p>
-                        Explore simple guides created especially
-                        for small vendors.
-                    </p>
-
-                </div>
-            </a>
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Digital Guide</h3>
+                <p>
+                    Explore simple guides created especially
+                    for small vendors.
+                </p>
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- Project Aim -->
-    <section class="aim">
+    <section class="quiz-box">
 
-        <h2>Project Aim</h2>
+        <h2>🎯 Test Your Digital Knowledge</h2>
 
         <p>
-            The main aim of VendorConnect is to create a simple
-            online awareness platform that helps small vendors
-            understand and adopt useful digital tools. The project
-            focuses on digital payments, QR codes, useful applications,
-            digital safety and basic business awareness.
+            Think you know the basics of digital payments and safety?
+            Take our short quiz and check your knowledge.
         </p>
+
+        <a href="quiz.html" class="btn">Start Quiz</a>
 
     </section>
 
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about">
 
         <h2>About VendorConnect</h2>
 
@@ -514,135 +381,19 @@
             VendorConnect is a CEP project focused on promoting
             digital awareness among small vendors. The platform
             provides simple information about UPI, QR payments,
-            digital applications, business benefits and safe
-            digital practices. The goal is to make digital
-            technology easier to understand and use for
-            everyday business activities.
+            digital applications and safe digital practices.
+            The goal is to make digital technology easier to
+            understand and use for everyday business activities.
         </p>
-
-
-        <div class="about-cards">
-
-            <div class="about-card">
-
-                <h3>🎯 Objectives</h3>
-
-                <p>
-                    To spread awareness about digital payments,
-                    useful digital applications and safe practices
-                    among small vendors.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>👥 Target Users</h3>
-
-                <p>
-                    The platform is designed mainly for small
-                    vendors and business owners who want to
-                    understand basic digital tools.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>💡 Need for Awareness</h3>
-
-                <p>
-                    Simple digital awareness can help vendors
-                    understand technology, make informed choices
-                    and use digital tools more confidently.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>🌐 Online Platform</h3>
-
-                <p>
-                    VendorConnect is developed as an online,
-                    code-based educational platform without
-                    requiring an offline survey.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>📚 Educational Purpose</h3>
-
-                <p>
-                    The website provides educational information
-                    and practical guidance about digital tools
-                    for small business activities.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>🔒 Safety Focus</h3>
-
-                <p>
-                    The project also promotes responsible digital
-                    usage by explaining basic precautions for
-                    protecting confidential payment information.
-                </p>
-
-            </div>
-
-        </div>
 
     </section>
 
 
-    <!-- Technologies -->
-    <section class="technology">
-
-        <h2>Technologies Used</h2>
-
-        <p>
-            VendorConnect is developed using simple web technologies
-            so that the platform can be accessed through a web browser.
-        </p>
-
-
-        <div class="tech-list">
-
-            <div class="tech-item">HTML</div>
-
-            <div class="tech-item">CSS</div>
-
-            <div class="tech-item">JavaScript</div>
-
-            <div class="tech-item">Visual Studio Code</div>
-
-            <div class="tech-item">Web Browser</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
     <footer>
 
-        <p>
-            © 2026 VendorConnect | CEP Project
-        </p>
+        <p>© 2026 VendorConnect | CEP Project</p>
 
-        <p>
-            Helping Small Vendors Go Digital
-        </p>
+        <p>Helping Small Vendors Go Digital</p>
 
     </footer>
 
