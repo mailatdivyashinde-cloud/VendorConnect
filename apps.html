@@ -15,12 +15,12 @@
         }
 
         body {
-            background-color: #f5f8ff;
+            background: #f5f8ff;
             color: #1f2937;
         }
 
         nav {
-            background-color: #173f8a;
+            background: #173f8a;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
@@ -36,7 +36,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 22px;
             font-size: 15px;
         }
 
@@ -46,12 +46,12 @@
 
         .hero {
             text-align: center;
-            padding: 70px 8%;
+            padding: 65px 8%;
             background: linear-gradient(135deg, #eaf2ff, #ffffff);
         }
 
         .hero .icon {
-            font-size: 65px;
+            font-size: 70px;
             margin-bottom: 15px;
         }
 
@@ -62,7 +62,7 @@
         }
 
         .hero p {
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
             font-size: 18px;
             line-height: 1.7;
@@ -70,7 +70,7 @@
         }
 
         .section {
-            padding: 60px 8%;
+            padding: 55px 8%;
         }
 
         .section h2 {
@@ -82,7 +82,7 @@
 
         .intro {
             max-width: 800px;
-            margin: 0 auto 40px;
+            margin: 0 auto 35px;
             text-align: center;
             line-height: 1.7;
             color: #555;
@@ -95,15 +95,15 @@
         }
 
         .card {
-            background-color: white;
-            padding: 30px;
+            background: white;
+            padding: 28px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
         }
 
         .card-icon {
             font-size: 42px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .card h3 {
@@ -111,59 +111,92 @@
             margin-bottom: 12px;
         }
 
-        .card p {
-            color: #666;
-            line-height: 1.6;
+        .card p,
+        .card li {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            padding-left: 20px;
         }
 
         .tips {
-            background-color: #173f8a;
-            color: white;
-            padding: 60px 8%;
-        }
-
-        .tips h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 30px;
-        }
-
-        .tips-list {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
-            line-height: 2;
-            font-size: 17px;
         }
 
-        .back {
+        .tip {
+            background: white;
+            margin: 15px 0;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .tip strong {
+            color: #173f8a;
+        }
+
+        .safety {
+            background: #eaf2ff;
+            padding: 35px;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .safety h3 {
+            color: #173f8a;
+            margin-bottom: 15px;
+        }
+
+        .safety li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .cta {
             text-align: center;
-            padding: 40px;
+            padding: 50px 8%;
+            background: white;
         }
 
-        .back a {
+        .cta h2 {
+            color: #173f8a;
+            margin-bottom: 15px;
+        }
+
+        .btn {
             display: inline-block;
-            background-color: #173f8a;
+            background: #173f8a;
             color: white;
-            text-decoration: none;
-            padding: 14px 25px;
+            padding: 13px 24px;
             border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
         }
 
         footer {
-            background-color: #102c5f;
+            background: #102c5f;
             color: white;
             text-align: center;
             padding: 25px;
         }
 
         @media (max-width: 800px) {
+
             nav {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
             nav a {
                 margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
             }
 
             .cards {
@@ -183,9 +216,8 @@
         <div>
             <a href="index.html">Home</a>
             <a href="upi.html">UPI</a>
-            <a href="qr.html">QR</a>
+            <a href="qr.html">QR Payment</a>
             <a href="apps.html">Apps</a>
-            <a href="index.html#about">About</a>
         </div>
 
     </nav>
@@ -196,11 +228,11 @@
 
         <div class="icon">📱</div>
 
-        <h1>Digital Apps for Small Vendors</h1>
+        <h1>Useful Digital Apps for Small Vendors</h1>
 
         <p>
-            Digital applications can help small vendors manage
-            payments, communicate with customers and organize
+            Digital applications can help small vendors accept payments,
+            communicate with customers, maintain records and manage
             everyday business activities more conveniently.
         </p>
 
@@ -213,52 +245,79 @@
         <h2>Why Use Digital Apps?</h2>
 
         <p class="intro">
-            Smartphones provide access to many useful digital
-            tools. Vendors can choose suitable applications
-            according to their business needs and comfort level.
+            A smartphone can provide access to many useful digital tools.
+            Vendors can choose applications according to their business
+            needs and use trusted services to make daily activities easier.
         </p>
 
         <div class="cards">
 
             <div class="card">
-
                 <div class="card-icon">💳</div>
-
                 <h3>Payment Apps</h3>
 
                 <p>
-                    UPI-enabled payment applications can help
-                    customers make digital payments conveniently.
+                    Payment applications can help vendors accept
+                    digital payments from customers through supported
+                    payment methods.
                 </p>
-
             </div>
 
 
             <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Communication Apps</h3>
 
-                <div class="card-icon">🧾</div>
+                <p>
+                    Messaging and communication tools can help vendors
+                    stay connected with customers and share useful
+                    business information.
+                </p>
+            </div>
 
+
+            <div class="card">
+                <div class="card-icon">📊</div>
                 <h3>Record Keeping</h3>
 
                 <p>
-                    Digital record-keeping tools can help vendors
-                    organize sales, expenses and transaction details.
+                    Digital tools can help vendors maintain information
+                    about sales, expenses and other business activities.
                 </p>
-
             </div>
 
 
             <div class="card">
-
-                <div class="card-icon">💬</div>
-
-                <h3>Customer Communication</h3>
+                <div class="card-icon">📍</div>
+                <h3>Maps & Location</h3>
 
                 <p>
-                    Messaging and business communication tools
-                    can help vendors communicate with customers.
+                    Map and location services can help customers find
+                    a shop or business more easily.
                 </p>
+            </div>
 
+
+            <div class="card">
+                <div class="card-icon">📣</div>
+                <h3>Online Promotion</h3>
+
+                <p>
+                    Digital platforms can help small businesses share
+                    information about their products and services.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">☁️</div>
+                <h3>Cloud Tools</h3>
+
+                <p>
+                    Cloud-based tools can help store and access
+                    important business information across supported
+                    devices.
+                </p>
             </div>
 
         </div>
@@ -266,52 +325,38 @@
     </section>
 
 
-    <!-- More Digital Tools -->
+    <!-- Choosing Apps -->
     <section class="section">
 
-        <h2>Useful Digital Tools</h2>
+        <h2>How to Choose a Digital App</h2>
 
-        <div class="cards">
+        <div class="tips">
 
-            <div class="card">
-
-                <div class="card-icon">📊</div>
-
-                <h3>Expense Tracking</h3>
-
-                <p>
-                    Digital tools can help vendors keep track of
-                    regular business expenses.
-                </p>
-
+            <div class="tip">
+                <strong>1. Check the Purpose:</strong>
+                Choose an application that actually solves a business need.
             </div>
 
-
-            <div class="card">
-
-                <div class="card-icon">📦</div>
-
-                <h3>Inventory Management</h3>
-
-                <p>
-                    Simple inventory tools can help track available
-                    products and stock levels.
-                </p>
-
+            <div class="tip">
+                <strong>2. Use Trusted Sources:</strong>
+                Download applications only from official and trusted app stores.
             </div>
 
+            <div class="tip">
+                <strong>3. Check Permissions:</strong>
+                Review the permissions requested by an application before using it.
+            </div>
 
-            <div class="card">
+            <div class="tip">
+                <strong>4. Keep Apps Updated:</strong>
+                Install updates from trusted sources to receive improvements
+                and security fixes.
+            </div>
 
-                <div class="card-icon">📅</div>
-
-                <h3>Business Planning</h3>
-
-                <p>
-                    Digital calendars and planning tools can help
-                    organize daily business activities.
-                </p>
-
+            <div class="tip">
+                <strong>5. Protect Your Account:</strong>
+                Use strong passwords or supported security features and
+                never share confidential authentication information.
             </div>
 
         </div>
@@ -322,49 +367,43 @@
     <!-- Benefits -->
     <section class="section">
 
-        <h2>Benefits of Digital Apps</h2>
+        <h2>Benefits for Small Businesses</h2>
 
         <div class="cards">
 
             <div class="card">
-
-                <div class="card-icon">⚡</div>
+                <div class="card-icon">⏱️</div>
 
                 <h3>Save Time</h3>
 
                 <p>
-                    Digital tools can make some routine business
-                    tasks faster and easier to manage.
+                    Digital tools can simplify repetitive business
+                    activities and make information easier to access.
                 </p>
-
             </div>
 
 
             <div class="card">
-
-                <div class="card-icon">📋</div>
+                <div class="card-icon">📈</div>
 
                 <h3>Better Organization</h3>
 
                 <p>
-                    Digital records can help keep important
-                    business information organized.
+                    Digital records and tools can help vendors organize
+                    important business information.
                 </p>
-
             </div>
 
 
             <div class="card">
-
                 <div class="card-icon">🤝</div>
 
                 <h3>Customer Convenience</h3>
 
                 <p>
-                    Digital services can provide customers with
-                    convenient ways to communicate and pay.
+                    Digital services can make communication and
+                    transactions more convenient for customers.
                 </p>
-
             </div>
 
         </div>
@@ -373,35 +412,40 @@
 
 
     <!-- Safety -->
-    <section class="tips">
+    <section class="section">
 
-        <h2>Before Using Any Digital App</h2>
+        <h2>Digital App Safety</h2>
 
-        <div class="tips-list">
+        <div class="safety">
 
-            <p>✔ Download applications from trusted official app stores.</p>
+            <h3>🛡️ Stay Safe Online</h3>
 
-            <p>✔ Check the application name and developer before installing.</p>
-
-            <p>✔ Keep applications updated.</p>
-
-            <p>✔ Use a strong screen lock on your mobile device.</p>
-
-            <p>✔ Never share passwords, OTPs or payment PINs.</p>
-
-            <p>✔ Review app permissions and avoid unnecessary access.</p>
+            <ul>
+                <li>Download apps only from trusted and official sources.</li>
+                <li>Keep your phone and applications updated.</li>
+                <li>Use screen lock and other available security features.</li>
+                <li>Never share OTPs, passwords or payment PINs.</li>
+                <li>Be careful with unknown links and messages.</li>
+                <li>Review app permissions and remove unnecessary access.</li>
+            </ul>
 
         </div>
 
     </section>
 
 
-    <!-- Back -->
-    <div class="back">
+    <!-- CTA -->
+    <section class="cta">
 
-        <a href="index.html">← Back to Home</a>
+        <h2>Continue Your Digital Journey</h2>
 
-    </div>
+        <p>
+            Learn about digital safety and protect your business online.
+        </p>
+
+        <a href="safety.html" class="btn">Learn Digital Safety</a>
+
+    </section>
 
 
     <!-- Footer -->
