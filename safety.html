@@ -1,446 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Safety | VendorConnect</title>
 
-    <title>Digital Safety | VendorConnect</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f8ff;
-            color: #1f2937;
-        }
-
-        nav {
-            background-color: #173f8a;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 70px 8%;
-            background: linear-gradient(135deg, #eaf2ff, #ffffff);
-        }
-
-        .hero .icon {
-            font-size: 65px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            color: #173f8a;
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.7;
-            color: #555;
-        }
-
-        .section {
-            padding: 60px 8%;
-        }
-
-        .section h2 {
-            text-align: center;
-            color: #173f8a;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .intro {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            text-align: center;
-            line-height: 1.7;
-            color: #555;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-        }
-
-        .card-icon {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #173f8a;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .warning {
-            background-color: #fff4e5;
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 25px;
-            border-left: 6px solid #173f8a;
-            border-radius: 10px;
-        }
-
-        .warning h3 {
-            color: #173f8a;
-            margin-bottom: 10px;
-        }
-
-        .safety-list {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .safety-item {
-            background-color: white;
-            margin-bottom: 18px;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-        }
-
-        .safety-item h3 {
-            color: #173f8a;
-            margin-bottom: 8px;
-        }
-
-        .safety-item p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .emergency {
-            background-color: #173f8a;
-            color: white;
-            padding: 60px 8%;
-            text-align: center;
-        }
-
-        .emergency h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .emergency p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
-        .back {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .back a {
-            display: inline-block;
-            background-color: #173f8a;
-            color: white;
-            text-decoration: none;
-            padding: 14px 25px;
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #102c5f;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 800px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 5px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f8ff;color:#1f2937}
+nav{background:#173f8a;padding:18px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{color:white;font-size:25px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:20px}
+.hero{text-align:center;padding:65px 8%;background:linear-gradient(135deg,#eaf2ff,#fff)}
+.hero .icon{font-size:65px}
+.hero h1{color:#173f8a;font-size:42px;margin:15px}
+.hero p{max-width:800px;margin:auto;line-height:1.7;color:#555;font-size:18px}
+.section{padding:55px 8%}
+.section h2{text-align:center;color:#173f8a;font-size:30px;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:white;padding:28px;border-radius:15px;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.card h3{color:#173f8a;margin-bottom:12px}
+.card p,.card li{color:#555;line-height:1.7}
+.card ul{padding-left:20px}
+.warning{background:#eaf2ff;padding:30px;border-radius:15px;max-width:850px;margin:auto}
+.warning h3{color:#173f8a;margin-bottom:15px}
+.warning li{margin:10px 0;line-height:1.6}
+footer{background:#102c5f;color:white;text-align:center;padding:25px}
+@media(max-width:800px){nav{flex-direction:column;gap:12px}.cards{grid-template-columns:1fr}.hero h1{font-size:34px}}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-
-        <div class="logo">VendorConnect</div>
-
-        <div>
-            <a href="index.html">Home</a>
-            <a href="upi.html">UPI</a>
-            <a href="qr.html">QR</a>
-            <a href="apps.html">Apps</a>
-            <a href="safety.html">Safety</a>
-            <a href="index.html#about">About</a>
-        </div>
-
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section class="hero">
-
-        <div class="icon">🛡️</div>
-
-        <h1>Digital Payment Safety</h1>
-
-        <p>
-            Staying safe online is an important part of using
-            digital payments. Learn simple practices that can
-            help vendors protect their payment information.
-        </p>
-
-    </section>
-
-
-    <!-- Important Warning -->
-    <section class="section">
-
-        <div class="warning">
-
-            <h3>⚠️ Remember</h3>
-
-            <p>
-                Your UPI PIN is used to authorize certain
-                transactions. Never share your UPI PIN, OTP,
-                password or other confidential banking information
-                with another person.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Safety Tips -->
-    <section class="section">
-
-        <h2>Essential Safety Practices</h2>
-
-        <p class="intro">
-            Follow these basic precautions while accepting
-            or making digital payments.
-        </p>
-
-        <div class="safety-list">
-
-            <div class="safety-item">
-
-                <h3>🔐 Never Share Your UPI PIN</h3>
-
-                <p>
-                    Keep your UPI PIN private. Banks and genuine
-                    support services should not ask you to disclose
-                    your confidential PIN.
-                </p>
-
-            </div>
-
-
-            <div class="safety-item">
-
-                <h3>🔢 Protect Your OTP</h3>
-
-                <p>
-                    Never share an OTP received on your phone with
-                    another person, even if they claim to be from
-                    a bank or payment service.
-                </p>
-
-            </div>
-
-
-            <div class="safety-item">
-
-                <h3>💰 Verify Every Payment</h3>
-
-                <p>
-                    Vendors should check the actual transaction
-                    status before considering a payment completed.
-                    Do not depend only on a screenshot sent by
-                    someone.
-                </p>
-
-            </div>
-
-
-            <div class="safety-item">
-
-                <h3>🔗 Be Careful With Links</h3>
-
-                <p>
-                    Avoid opening suspicious links received through
-                    unknown messages, emails or social media.
-                </p>
-
-            </div>
-
-
-            <div class="safety-item">
-
-                <h3>📱 Use Official Applications</h3>
-
-                <p>
-                    Download applications from trusted official
-                    app stores and keep your applications updated.
-                </p>
-
-            </div>
-
-
-            <div class="safety-item">
-
-                <h3>👀 Check Payment Details</h3>
-
-                <p>
-                    Before confirming a transaction, carefully
-                    check the recipient and amount shown on the
-                    payment screen.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Common Warning Signs -->
-    <section class="section">
-
-        <h2>Common Warning Signs</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="card-icon">🚨</div>
-
-                <h3>Urgent Requests</h3>
-
-                <p>
-                    Be cautious when someone pressures you to
-                    make a payment immediately.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">📸</div>
-
-                <h3>Fake Screenshots</h3>
-
-                <p>
-                    A payment screenshot can be edited or misleading.
-                    Always verify the actual transaction status.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">🔑</div>
-
-                <h3>Secret Information</h3>
-
-                <p>
-                    Never provide your PIN, OTP, password or
-                    other confidential information to strangers.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- If Something Goes Wrong -->
-    <section class="emergency">
-
-        <h2>If You Notice a Suspicious Transaction</h2>
-
-        <p>
-            Stop interacting with the suspicious person or request.
-            Keep records of the transaction and contact your bank
-            or the relevant payment service through its official
-            support channel as soon as possible.
-        </p>
-
-    </section>
-
-
-    <!-- Back -->
-    <div class="back">
-
-        <a href="index.html">← Back to Home</a>
-
-    </div>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>© 2026 VendorConnect | CEP Project</p>
-
-        <p>Helping Small Vendors Go Digital</p>
-
-    </footer>
+<nav>
+<div class="logo">VendorConnect</div>
+<div>
+<a href="index.html">Home</a>
+<a href="upi.html">UPI</a>
+<a href="qr.html">QR Payment</a>
+<a href="apps.html">Apps</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="icon">🛡️</div>
+<h1>Digital Safety for Small Vendors</h1>
+<p>Learn simple practices to protect your digital payments, accounts and business information.</p>
+</section>
+
+<section class="section">
+<h2>Important Safety Practices</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🔐 Protect Your PIN</h3>
+<p>Never share your UPI PIN, password or other confidential authentication information.</p>
+</div>
+
+<div class="card">
+<h3>📩 Beware of Scams</h3>
+<p>Be careful with unexpected messages, links and payment requests.</p>
+</div>
+
+<div class="card">
+<h3>📱 Secure Your Phone</h3>
+<p>Use a screen lock and keep your phone and applications updated.</p>
+</div>
+
+<div class="card">
+<h3>💳 Check Payments</h3>
+<p>Always verify the recipient, amount and actual payment status.</p>
+</div>
+
+<div class="card">
+<h3>🔗 Check Links</h3>
+<p>Do not open suspicious links or provide confidential information on unknown websites.</p>
+</div>
+
+<div class="card">
+<h3>🚨 Report Problems</h3>
+<p>If you notice suspicious activity, contact the appropriate bank or service provider promptly.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Remember</h2>
+
+<div class="warning">
+<h3>🛡️ Simple Rule</h3>
+<ul>
+<li>Never share OTPs or UPI PINs.</li>
+<li>Verify payment details before approving.</li>
+<li>Do not trust payment screenshots alone.</li>
+<li>Use official and trusted applications.</li>
+<li>Keep important account information private.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p>© 2026 VendorConnect | CEP Project</p>
+<p>Helping Small Vendors Go Digital</p>
+</footer>
 
 </body>
 </html>
