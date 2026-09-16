@@ -138,11 +138,25 @@
             gap: 25px;
         }
 
+        /* Clickable card link */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .card {
             background-color: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-link:hover .card {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
         }
 
         .card-icon {
@@ -300,59 +314,82 @@
 
         <div class="cards">
 
-            <div class="card">
-                <div class="card-icon">💳</div>
-                <h3>UPI Payments</h3>
-                <p>
-                    Understand UPI and how digital payments can
-                    make transactions convenient.
-                </p>
-            </div>
+            <!-- UPI CARD -->
+            <a href="upi.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">💳</div>
+                    <h3>UPI Payments</h3>
+                    <p>
+                        Understand UPI and how digital payments can
+                        make transactions convenient.
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <div class="card-icon">🔳</div>
-                <h3>QR Payments</h3>
-                <p>
-                    Learn how QR codes allow customers to make
-                    quick digital payments.
-                </p>
-            </div>
 
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h3>Digital Apps</h3>
-                <p>
-                    Discover useful applications that can support
-                    small business activities.
-                </p>
-            </div>
+            <!-- QR CARD -->
+            <a href="qr.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🔳</div>
+                    <h3>QR Payments</h3>
+                    <p>
+                        Learn how QR codes allow customers to make
+                        quick digital payments.
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <div class="card-icon">🛡️</div>
-                <h3>Digital Safety</h3>
-                <p>
-                    Learn basic safety practices for protecting
-                    digital payments and personal information.
-                </p>
-            </div>
 
-            <div class="card">
-                <div class="card-icon">📊</div>
-                <h3>Business Benefits</h3>
-                <p>
-                    Understand how digital tools can improve
-                    convenience and business management.
-                </p>
-            </div>
+            <!-- APPS CARD -->
+            <a href="apps.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Digital Apps</h3>
+                    <p>
+                        Discover useful applications that can support
+                        small business activities.
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <div class="card-icon">📚</div>
-                <h3>Digital Guide</h3>
-                <p>
-                    Explore simple guides created especially
-                    for small vendors.
-                </p>
-            </div>
+
+            <!-- SAFETY CARD -->
+            <a href="safety.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Digital Safety</h3>
+                    <p>
+                        Learn basic safety practices for protecting
+                        digital payments and personal information.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- BENEFITS CARD -->
+            <a href="benefits.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Business Benefits</h3>
+                    <p>
+                        Understand how digital tools can improve
+                        convenience and business management.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- GUIDE CARD -->
+            <a href="guide.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Digital Guide</h3>
+                    <p>
+                        Explore simple guides created especially
+                        for small vendors.
+                    </p>
+                </div>
+            </a>
 
         </div>
 
