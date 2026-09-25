@@ -1,1 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>VendorConnect | Helping Small Vendors Go Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f8ff;
+            color: #1f2937;
+        }
+
+        nav {
+            background-color: #173f8a;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 500px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #173f8a;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #173f8a;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0f2e68;
+        }
+
+        .hero-card {
+            background-color: white;
+            width: 330px;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+            text-align: center;
+        }
+
+        .hero-card .icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero-card h3 {
+            color: #173f8a;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            color: #173f8a;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Clickable card link */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-link:hover .card {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .quiz-box {
+            background: #eaf2ff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .quiz-box h2 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .quiz-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .about {
+            background-color: #173f8a;
+            color: white;
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        footer {
+            background-color: #102c5f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                width: 100%;
+                max-width: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">VendorConnect</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="apps.html">Apps</a>
+            <a href="benefits.html">Benefits</a>
+            <a href="guide.html">Guide</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="safety.html">Safety</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Helping Small Vendors Go Digital</h1>
+
+            <h2>Simple. Safe. Digital.</h2>
+
+            <p>
+                VendorConnect is an online awareness platform designed
+                to help small vendors understand digital payments,
+                QR codes, useful apps and safe digital practices.
+            </p>
+
+            <a href="#learn" class="btn">Start Learning</a>
+
+            <a href="quiz.html" class="btn">Take Quiz</a>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="icon">📱</div>
+
+            <h3>Go Digital with Confidence</h3>
+
+            <p>
+                Learn simple digital tools that can make everyday
+                business easier and more convenient.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="learn">
+
+        <h2>Explore Digital Tools</h2>
+
+        <p class="section-intro">
+            Learn about important digital technologies that can
+            help small vendors manage payments and business activities.
+        </p>
+
+        <div class="cards">
+
+            <!-- UPI CARD -->
+            <a href="upi.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">💳</div>
+                    <h3>UPI Payments</h3>
+                    <p>
+                        Understand UPI and how digital payments can
+                        make transactions convenient.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- QR CARD -->
+            <a href="qr.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🔳</div>
+                    <h3>QR Payments</h3>
+                    <p>
+                        Learn how QR codes allow customers to make
+                        quick digital payments.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- APPS CARD -->
+            <a href="apps.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Digital Apps</h3>
+                    <p>
+                        Discover useful applications that can support
+                        small business activities.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- SAFETY CARD -->
+            <a href="safety.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Digital Safety</h3>
+                    <p>
+                        Learn basic safety practices for protecting
+                        digital payments and personal information.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- BENEFITS CARD -->
+            <a href="benefits.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Business Benefits</h3>
+                    <p>
+                        Understand how digital tools can improve
+                        convenience and business management.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- GUIDE CARD -->
+            <a href="guide.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Digital Guide</h3>
+                    <p>
+                        Explore simple guides created especially
+                        for small vendors.
+                    </p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="quiz-box">
+
+        <h2>🎯 Test Your Digital Knowledge</h2>
+
+        <p>
+            Think you know the basics of digital payments and safety?
+            Take our short quiz and check your knowledge.
+        </p>
+
+        <a href="quiz.html" class="btn">Start Quiz</a>
+
+    </section>
+
+
+    <section class="about">
+
+        <h2>About VendorConnect</h2>
+
+        <p>
+            VendorConnect is a CEP project focused on promoting
+            digital awareness among small vendors. The platform
+            provides simple information about UPI, QR payments,
+            digital applications and safe digital practices.
+            The goal is to make digital technology easier to
+            understand and use for everyday business activities.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 VendorConnect | CEP Project</p>
+
+        <p>Helping Small Vendors Go Digital</p>
+
+    </footer>
+
+</body>
+</html>

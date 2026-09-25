@@ -1,1 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Digital Quiz | VendorConnect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f8ff;
+            color: #1f2937;
+        }
+
+        nav {
+            background: #173f8a;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #eaf2ff, #ffffff);
+        }
+
+        .hero .icon {
+            font-size: 65px;
+        }
+
+        .hero h1 {
+            color: #173f8a;
+            font-size: 42px;
+            margin: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .quiz-container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .question {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .question h3 {
+            color: #173f8a;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f5f8ff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background: #eaf2ff;
+        }
+
+        input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: block;
+            margin: 30px auto;
+            background: #173f8a;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #0f2e68;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #173f8a;
+            margin: 25px;
+        }
+
+        .tips {
+            background: #eaf2ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .tips h2 {
+            color: #173f8a;
+            margin-bottom: 12px;
+        }
+
+        .tips p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #102c5f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">VendorConnect</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="upi.html">UPI</a>
+            <a href="qr.html">QR</a>
+            <a href="apps.html">Apps</a>
+            <a href="benefits.html">Benefits</a>
+            <a href="guide.html">Guide</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="safety.html">Safety</a>
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="icon">🎯</div>
+
+        <h1>VendorConnect Digital Quiz</h1>
+
+        <p>
+            Test your basic knowledge about UPI, QR payments,
+            digital apps and online safety.
+        </p>
+
+    </section>
+
+
+    <div class="quiz-container">
+
+        <form method="POST" action="/quiz">
+
+            <div class="question">
+
+                <h3>1. What does UPI stand for?</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Universal Payment Internet
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="correct">
+                    Unified Payments Interface
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    User Payment Identity
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>2. What is commonly used to scan a payment QR code?</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="correct">
+                    A compatible smartphone or payment application
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    A television
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    A printer only
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>3. Which information should never be shared with others?</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Shop name
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="correct">
+                    UPI PIN or OTP
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Business opening hours
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>4. What should a vendor check after a digital payment?</h3>
+
+                <label>
+                    <input type="radio" name="q4" value="correct">
+                    The actual payment status and transaction details
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    Only the customer's screenshot
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    Nothing
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>5. Where should apps preferably be downloaded from?</h3>
+
+                <label>
+                    <input type="radio" name="q5" value="correct">
+                    Official and trusted app stores
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="wrong">
+                    Unknown websites
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="wrong">
+                    Random links
+                </label>
+
+            </div>
+
+
+            <button class="btn" type="submit">
+                Check Answers
+            </button>
+
+        </form>
+
+
+        {% if score is not none %}
+
+        <div id="result">
+            🎉 Your Score: {{ score }} / 5
+        </div>
+
+        {% endif %}
+
+
+        <div class="tips">
+
+            <h2>🛡️ Digital Safety Reminder</h2>
+
+            <p>
+                Never share your UPI PIN, OTP or passwords.
+                Always verify payment details before completing a transaction.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>© 2026 VendorConnect | CEP Project</p>
+
+        <p>Helping Small Vendors Go Digital</p>
+
+    </footer>
+
+</body>
+</html>
