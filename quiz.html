@@ -178,7 +178,7 @@
             <a href="upi.html">UPI</a>
             <a href="qr.html">QR</a>
             <a href="apps.html">Apps</a>
-            <a href="benefit.html">Benefits</a>
+            <a href="benefits.html">Benefits</a>
             <a href="guide.html">Guide</a>
             <a href="quiz.html">Quiz</a>
             <a href="safety.html">Safety</a>
@@ -203,121 +203,132 @@
 
     <div class="quiz-container">
 
-        <div class="question">
+        <form method="POST" action="/quiz">
 
-            <h3>1. What does UPI stand for?</h3>
+            <div class="question">
 
-            <label>
-                <input type="radio" name="q1" value="wrong">
-                Universal Payment Internet
-            </label>
+                <h3>1. What does UPI stand for?</h3>
 
-            <label>
-                <input type="radio" name="q1" value="correct">
-                Unified Payments Interface
-            </label>
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    Universal Payment Internet
+                </label>
 
-            <label>
-                <input type="radio" name="q1" value="wrong">
-                User Payment Identity
-            </label>
+                <label>
+                    <input type="radio" name="q1" value="correct">
+                    Unified Payments Interface
+                </label>
 
+                <label>
+                    <input type="radio" name="q1" value="wrong">
+                    User Payment Identity
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>2. What is commonly used to scan a payment QR code?</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="correct">
+                    A compatible smartphone or payment application
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    A television
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="wrong">
+                    A printer only
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>3. Which information should never be shared with others?</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Shop name
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="correct">
+                    UPI PIN or OTP
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="wrong">
+                    Business opening hours
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>4. What should a vendor check after a digital payment?</h3>
+
+                <label>
+                    <input type="radio" name="q4" value="correct">
+                    The actual payment status and transaction details
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    Only the customer's screenshot
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="wrong">
+                    Nothing
+                </label>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>5. Where should apps preferably be downloaded from?</h3>
+
+                <label>
+                    <input type="radio" name="q5" value="correct">
+                    Official and trusted app stores
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="wrong">
+                    Unknown websites
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="wrong">
+                    Random links
+                </label>
+
+            </div>
+
+
+            <button class="btn" type="submit">
+                Check Answers
+            </button>
+
+        </form>
+
+
+        {% if score is not none %}
+
+        <div id="result">
+            🎉 Your Score: {{ score }} / 5
         </div>
 
-
-        <div class="question">
-
-            <h3>2. What is commonly used to scan a payment QR code?</h3>
-
-            <label>
-                <input type="radio" name="q2" value="correct">
-                A compatible smartphone or payment application
-            </label>
-
-            <label>
-                <input type="radio" name="q2" value="wrong">
-                A television
-            </label>
-
-            <label>
-                <input type="radio" name="q2" value="wrong">
-                A printer only
-            </label>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>3. Which information should never be shared with others?</h3>
-
-            <label>
-                <input type="radio" name="q3" value="wrong">
-                Shop name
-            </label>
-
-            <label>
-                <input type="radio" name="q3" value="correct">
-                UPI PIN or OTP
-            </label>
-
-            <label>
-                <input type="radio" name="q3" value="wrong">
-                Business opening hours
-            </label>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>4. What should a vendor check after a digital payment?</h3>
-
-            <label>
-                <input type="radio" name="q4" value="correct">
-                The actual payment status and transaction details
-            </label>
-
-            <label>
-                <input type="radio" name="q4" value="wrong">
-                Only the customer's screenshot
-            </label>
-
-            <label>
-                <input type="radio" name="q4" value="wrong">
-                Nothing
-            </label>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>5. Where should apps preferably be downloaded from?</h3>
-
-            <label>
-                <input type="radio" name="q5" value="correct">
-                Official and trusted app stores
-            </label>
-
-            <label>
-                <input type="radio" name="q5" value="wrong">
-                Unknown websites
-            </label>
-
-            <label>
-                <input type="radio" name="q5" value="wrong">
-                Random links
-            </label>
-
-        </div>
-
-
-        <button class="btn" onclick="checkQuiz()">
-            Check Answers
-        </button>
-
-        <div id="result"></div>
+        {% endif %}
 
 
         <div class="tips">
@@ -341,34 +352,6 @@
         <p>Helping Small Vendors Go Digital</p>
 
     </footer>
-
-
-    <script>
-
-        function checkQuiz() {
-
-            let score = 0;
-
-            let questions = document.querySelectorAll(".question");
-
-            questions.forEach(function(question) {
-
-                let selected = question.querySelector(
-                    'input[type="radio"]:checked'
-                );
-
-                if (selected && selected.value === "correct") {
-                    score++;
-                }
-
-            });
-
-            document.getElementById("result").innerHTML =
-                "🎉 Your Score: " + score + " / 5";
-
-        }
-
-    </script>
 
 </body>
 </html>
